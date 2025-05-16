@@ -38,7 +38,7 @@ def insight(inp: StepsIn):
         f"<|assistant|>\n"
     )
 
-    # ✅ tighter generation limits
+    # tighter generation limits
     generated_ids = model.generate(
         tokenizer(chat_prompt, return_tensors="pt").input_ids,
         max_new_tokens=60,   # was 120
